@@ -25,20 +25,21 @@ public class Main {
 
         // EBOB
 
-//        for (int i = 1; i < n1; i++) {
-//            if (n1 % i == 0 && n2 % i == 0) {
-//                ebob = i;
-//            }
-//        }
+        for (int i = 1; i < n1; i++) {
+            if (n1 % i == 0 && n2 % i == 0) {
+                ebob = i;
+            }
+        }
 
-//        for (int k = n1; k >= 1; k--) {
-//            if (n1 % k == 0 && n2 % k == 0) {
-//                ebob = k;
-//                break;
-//            }
-//        }
-//
-//        System.out.println(ebob);
+        for (int k = n1; k >= 1; k--) {
+            if (n1 % k == 0 && n2 % k == 0) {
+                ebob = k;
+                break;
+            }
+        }
+
+
+        System.out.println((n1 * n2) / ebob);
 
 
     }
