@@ -30,6 +30,32 @@ public class Main {
         return result;
     }
 
+    static int power(int a, int b) {
+        int result = 1;
+        for (int i = 1; i <= b; i++) {
+            result *= a;
+            System.out.println(result);
+        }
+
+        System.out.println("\n" + a + "'nın " + b + " üssü " + result + "\n");
+        return result;
+    }
+
+    static int mod(int a, int b) {
+        int result = a & b;
+
+        System.out.println("\n" + a + " % " + b + " = " + result + "\n");
+        return result;
+    }
+
+    static void calc(int a, int b) {
+        int cevre = 2 * (a * b);
+        int alan = a * b;
+
+        System.out.println("\n" + a + " " + b + " nin çevresi : " + cevre + "\n");
+        System.out.println("\n" + a + " " + b + " nin alanı : " + alan + "\n");
+    }
+
 
     public static void main(String[] args) {
 
@@ -57,6 +83,11 @@ public class Main {
                 break;
             }
 
+            if (select > 9 || select < 0) {
+                System.out.println("Hatalı seçim yaptınız !!! ");
+                break;
+            }
+
             System.out.print("İlk Sayıyı girin : ");
             int a = input.nextInt();
             System.out.print("İkinci Sayıyı girin : ");
@@ -74,6 +105,15 @@ public class Main {
                     break;
                 case 4:
                     diveded(a, b);
+                    break;
+                case 5:
+                    power(a, b);
+                    break;
+                case 6:
+                    mod(a, b);
+                    break;
+                case 7:
+                    calc(a, b);
                     break;
             }
         }
